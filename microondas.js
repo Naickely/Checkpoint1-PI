@@ -1,5 +1,5 @@
 var readlineSync = require("readline-sync")
-console.log(   MICROONDAS  );
+console.log(MICROONDAS);
 
 function tempoPadrao(){
 let tempoPipoca = 10
@@ -20,7 +20,25 @@ Escolha o seu prato:
 ------------------------------------------------------
 `);
 function microondas(prato, tempo){
-  console.log(prato, tempo)
+  let tempo = 0
+  switch (prato){
+    case '1':
+        tempo = tempoPipoca;
+        break;
+    case '2':
+        tempo = tempoMacarrão;
+        break;
+    case '3':
+        tempo = tempoCarne;
+        break;
+    case '4':
+        tempo = tempoFeijão;
+        break;
+    case '5':
+        tempo = tempoBrigadeiro;
+        break;
+    default:
+        console.log("Escolha uma opção") };
 };
 
 if(tempo>=tempoPadrao){
@@ -35,5 +53,4 @@ if(tempo>=tempoPadrao){
   console.log("Prato inexistente")
 } else{"Bug"}
   
-
 
