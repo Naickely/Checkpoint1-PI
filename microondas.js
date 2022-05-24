@@ -20,7 +20,8 @@ Escolha o seu prato:
 ------------------------------------------------------
 `);
 function microondas(prato, tempo){
-  let tempo = 0
+  let tempo = 0};
+  
   switch (prato){
     case '1':
         tempo = tempoPipoca;
@@ -39,7 +40,7 @@ function microondas(prato, tempo){
         break;
     default:
         console.log("Escolha uma opção") };
-};
+
 
 if(tempo>=tempoPadrao){
   console.log ("Seu prato está pronto!Bom apetite ;)")
