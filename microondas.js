@@ -1,57 +1,37 @@
-var readlineSync = require("readline-sync")
-console.log(MICROONDAS);
 
-function tempoPadrao(){
-let tempoPipoca = 10
-let tempoMacarrão = 8
-let tempoCarne = 15
-let tempoFeijão = 12
-let tempoBrigadeiro = 8
-}
+console.log(`
+BEM-VINDO AO MICROONDAS:
 
-let prato= readlineSync.question(`
-Escolha o seu prato:
--------------------------------------------------------
-      1 - Pipoca             
-      2 - Macarrão          
-      3 - Carne
-      4 - Feijão
-      5 - Brigadeiro
-------------------------------------------------------
+1 - PIPOCA
+2 - MACARRÃO
+3 - CARNE
+4 - FEIJÃO
+5 - BRIGADEIRO
 `);
-function microondas(prato, tempo){
-  let tempo = 0};
-  
-  switch (prato){
-    case '1':
-        tempo = tempoPipoca;
-        break;
-    case '2':
-        tempo = tempoMacarrão;
-        break;
-    case '3':
-        tempo = tempoCarne;
-        break;
-    case '4':
-        tempo = tempoFeijão;
-        break;
-    case '5':
-        tempo = tempoBrigadeiro;
-        break;
-    default:
-        console.log("Escolha uma opção") };
+
+let pratos = ['PIPOCA', 'MACARRÃO', 'CARNE', 'FEIJÃO', 'BRIGADEIRO']
+let tempoPratos = [ 10, 8, 15, 12, 8]
+ 
+let tempo = ''
+
+console.log ("Escolha um prato:");
+
+function Cozimento(){
+  pratos = tempoPratos
+  pratos = tempo
+};
 
 
-if(tempo>=tempoPadrao){
-  console.log ("Seu prato está pronto!Bom apetite ;)")
-} else if (tempo>=tempoPadrao*2){
-  console.log ("Sua comida queimou! :(")
-} else if (tempo>=tempoPadrao*3){
-  console.log ("KABUMMM!! :o")
-} else if(tempo<tempoPadrao){
-  console.log("Tempo insuficiente! :/")
-} else if(prato>5){
-  console.log("Prato inexistente")
-} else{"Bug"}
-  
-
+      if(tempo>=tempoPratos){
+        console.log ("Seu prato está pronto!Bom apetite ;)")
+      } else if (tempo>=tempoPratos*2){
+        console.log ("Sua comida queimou! :(")
+      } else if (tempo>=tempoPratos*3){
+        console.log ("KABUMMM!! :o")
+      } else if(tempo<tempoPratos){
+        console.log("Tempo insuficiente! :/")
+      } else if(pratos>4){
+        console.log("Prato inexistente")
+      } else{"Bug"}
+        
+      
