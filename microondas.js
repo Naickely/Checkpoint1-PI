@@ -1,37 +1,63 @@
+var readlineSync = require("readline-sync")
 
-console.log(`
-BEM-VINDO AO MICROONDAS:
+console.log(MICROONDAS);
 
-0 - PIPOCA
-1 - MACARRÃO
-2 - CARNE
-3 - FEIJÃO
-4 - BRIGADEIRO
+function tempoPadrao(){
+let tempoPipoca = 10
+let tempoMacarrão = 8
+let tempoCarne = 15
+let tempoFeijão = 12
+let tempoBrigadeiro = 8
+}
+
+let prato= readlineSync.question(`
+Selecione uma opcao:
+      1.Pipoca             
+      2.Macarrão          
+      3.Carne
+      4.Feijão
+      5.Brigadeiro 
 `);
 
-let pratos = ['PIPOCA', 'MACARRÃO', 'CARNE', 'FEIJÃO', 'BRIGADEIRO']
-let tempoPratos = [ 10, 8, 15, 12, 8]
- 
-let tempo = ''
+let tempoEscolhido = readlineSync.question(`Escolha um tempo...`);
 
-console.log ("Escolha um prato:");
+microondas(opcao, tempoEscolhido);
 
-function Cozimento(){
-  pratos = tempoPratos
-  pratos = tempo
-};
-
-
-      if(tempo>=tempoPratos){
-        console.log ("Seu prato está pronto!Bom apetite ;)")
-      } else if (tempo>=tempoPratos*2){
-        console.log ("Sua comida queimou! :(")
-      } else if (tempo>=tempoPratos*3){
-        console.log ("KABUMMM!! :o")
-      } else if(tempo<tempoPratos){
-        console.log("Tempo insuficiente! :/")
-      } else if(pratos>4){
-        console.log("Prato inexistente")
-      } else{"Bug"}
+function microondas(prato, tempo){
+    let padrao = 0;
+    
+    switch (prato){
+      case '1':
+          padrao = tempoPipoca;
+          break;
+      case '2':
+          padrao = tempoMacarrão;
+          break;
+      case '3':
+          padrao = tempoCarne;
+          break;
+      case '4':
+          padrao = tempoFeijão;
+          break;
+      case '5':
+          padrao = tempoBrigadeiro;
+          break;
+      default:
+          console.log("Escolha uma opção");
+      }
         
-      
+  
+      if(tempoEscolhido>=prato){
+      console.log ("Seu prato está pronto!Bom apetite ;)")
+      } else if (tempoEscolhido>=prato*2){
+      console.log ("Sua comida queimou! :(")
+      } else if (tempoEscolhido>=prato*3){
+      console.log ("KABUMMM!! :o")
+      } else if(tempoEscolhido<prato){
+      console.log("Tempo insuficiente! :/")
+      } else if(prato>5){
+      console.log("Prato inexistente")
+      } else {
+          console.log("buggg");
+      }
+  }
